@@ -1,0 +1,9 @@
+The invention of the telegraph created a domino effect for technologies used today. 
+- The telegraph was created to ease the task of communicating with people. Morse code was the key asset used by the telegraph to deliver value to consumers. 
+- Over time the telegraph was developed to send photos as well, adding to its value. The main consumer segments were; the railway industry, newspapers, businesses, and everyday people. 
+- For businesses the telegraph was attractive because it assisted in commerce trading, identified areas of demand of product and services, and allowed control over day to day operations remotely. Along with this, railways could operate more adequately and newspapers were receiving reliable information quicker.
+
+**The importance of the telegraph** was that it could send messages instantly and across the world; this gave people a prompt sense of correspondence. 
+
+- Over time the popularity of the telegraph grew and its operators had to develop an activity to execute its process with greater ease. This activity became known as Papertape, which allowed telegrams to be sent at a later time. Not only did Papertape relieve tension on the demand of the telegraph but it also allowed for a chance of revenue.  
+	- People and businesses were charged different rates dependent upon time of day and the day of the week. The telegraph also received revenues from contracts with railway, newspaper, and advertising companies. To keep these revenues, they continued to build and sustain their customer relationships. Railway companies were key partners with telegraph operators throughout its time of use. The railways were beneficial because of the string wires and poles they already owned.

@@ -1,0 +1,9 @@
+##### Related Links:
+- [[The "Amherst Method" - Origins of the Dewey Decimal Classification Scheme]]
+- [[THE DEWEY DEBATE]]
+ Tags: #inventors #Books/Classifications 
+---
+  While Melvil Dewey certainly did not invent his decimal scheme out of whole cloth, but he did craft its pattern by selecting the threads from which its essential fabric was woven. For the most part these threads came from two locations, The St. Louis Public School Library classification system & Amherst College.
+		- Dewey's genius was in weaving them into a simple system most libraries could easily adopt. His good fortune was that he presented it at the beginning of a public library movement in the United States that significantly benefited from a common classification scheme, and since in the twentieth century, the American public library became a model other countries emulated, worldwide adoption of Dewey's scheme followed easily.
+ 
+ His legacy, however, is mixed. On the one hand, the scheme has over the decades saved millions of dollars and countless hours of time. Because it has become so widely accepted throughout the world it has permitted one person to classify one title for the hundreds of thousands of libraries using the decimal system. In addition, the system itself has become familiar to millions of people who can feel relatively confident that their knowledge of the system used in one library will serve them well in another. On the other hand, the doctrine of Anglo-Saxonism Dewey wove so tightly into his system has over the years resisted the introduction of new threads with more culturally pluralistic origins
