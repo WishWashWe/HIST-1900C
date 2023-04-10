@@ -6,4 +6,4 @@
 
 - Thankyou for your time :) 
 ---
-![[Pasted image 20230409170515.png]]
+[[Pasted image 20230409170515.png]]
