@@ -1,5 +1,8 @@
 Tags: #InformationTechnology #modernmedia #readings #History 
-Links: [[Is It Time for the Internet yet?]] , [[March 29- I love the 90's even more!!]]
+
+Links: [[Is It Time for the Internet yet?]] 
+
+[[March 29- I love the 90's even more!!]]
 
 ---
 ### Reference 
