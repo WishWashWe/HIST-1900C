@@ -16,4 +16,5 @@ Bory, Paolo. “The Myth of the World Wide Web.” _The Internet Myth: From the
 - Chapter 1 gives an outline of the historical and cultural background behind the development of the internet. Bory asserts that the online imaginary is a critical component of the internet's cultural history, having been moulded by many discourses and ideologies. Bory puts down the basis for a critical examination of the internet and its cultural, social, and political significance by following the evolution of these discourses.
 
 - Chapter 2 offers a critique of the "Myth of the World Wide Web" as well as the growth of network ideologies in the 1990s. Networks, according to Bory, are not inherently democratic, but rather centres of power and control. Bory provides the framework for a more thorough understanding of the internet and its cultural, social, and political significance by challenging the myth of the World Wide Web.
+
 ---
