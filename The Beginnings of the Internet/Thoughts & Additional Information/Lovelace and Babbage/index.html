@@ -1,0 +1,622 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<link href="../DIGITAL%20COMPUTERS%20-%20THE%20TURING%20MACHINE/" rel="prev"/>
+<link href="../Turing%27s%20Learning%20Machines/" rel="next"/>
+<link href="../../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.1.8" name="generator"/>
+<title>Lovelace and Babbage - obsidian-mkdocs template</title>
+<link href="../../../assets/stylesheets/main.ded33207.min.css" rel="stylesheet"/>
+<link href="../../../assets/stylesheets/palette.a0c5b2b5.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+</head>
+<body data-md-color-accent="indigo" data-md-color-primary="pink" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header md-header--shadow" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="obsidian-mkdocs template" class="md-header__button md-logo" data-md-component="logo" href="../../.." title="obsidian-mkdocs template">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            obsidian-mkdocs template
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Lovelace and Babbage
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="(prefers-color-scheme: light)" data-md-color-primary="pink" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="blue" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-primary="pink" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" title="Clear" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list" role="presentation"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="obsidian-mkdocs template" class="md-nav__button md-logo" data-md-component="logo" href="../../.." title="obsidian-mkdocs template">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"></path></svg>
+</a>
+    obsidian-mkdocs template
+  </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../..">
+        Home
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../Map%20of%20Content/">
+        Map of Content
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          The Beginnings of the Internet
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          The Beginnings of the Internet
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../The%20Beginnings%20of%20the%20Internet/">
+        The Beginnings of the Internet
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          Class Notes
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_2">
+<span class="md-nav__icon md-icon"></span>
+          Class Notes
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Class%20Notes/The%20Bell%20Company/">
+        The Bell Company
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Class%20Notes/The%20Telegraph/">
+        The Telegraph
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Class%20Notes/The%20Telphone/">
+        The Telphone
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_3_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          Readings
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_3_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_3">
+<span class="md-nav__icon md-icon"></span>
+          Readings
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Readings/A%20Victorian%20Ecological%20Disaster%20-%20Imperialism%2C%20the%20Telegraph%2C%20and%20Gutta-Percha/">
+        A Victorian Ecological Disaster   Imperialism, the Telegraph, and Gutta Percha
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Readings/Faxed-The%20Rise%20and%20Fall%20of%20the%20Fax%20Machine/">
+        Faxed The Rise and Fall of the Fax Machine
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Readings/Lovelace%20%26%20Babbage%20and%20the%20creation%20of%20the%201843%20%27notes%27/">
+        Lovelace &amp; Babbage and the creation of the 1843 'notes'
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Readings/The%20People%27s%20Network-%20The%20Political%20Economy%20of%20the%20Telephone%20in%20the%20Gilded%20Age/">
+        The People's Network  The Political Economy of the Telephone in the Gilded Age
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../Readings/Turing%20Machines%20and%20the%20Turing%20Test/">
+        Turing Machines and the Turing Test
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" id="__nav_3_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          Thoughts &amp; Additional Information
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="true" aria-labelledby="__nav_3_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_3_4">
+<span class="md-nav__icon md-icon"></span>
+          Thoughts &amp; Additional Information
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../About%20Ada%20Lovelace/">
+        About Ada Lovelace
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../About%20Alan%20Turing/">
+        About Alan Turing
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Alexander%20Graham%20Bell%20and%20the%20Telephone/">
+        Alexander Graham Bell and the Telephone
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Canada%20and%20the%20Telegraph/">
+        Canada and the Telegraph
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Canada%20and%20the%20Telephone/">
+        Canada and the Telephone
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../DIGITAL%20COMPUTERS%20-%20THE%20TURING%20MACHINE/">
+        DIGITAL COMPUTERS   THE TURING MACHINE
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" id="__toc" type="checkbox"/>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Lovelace and Babbage
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Turing%27s%20Learning%20Machines/">
+        Turing's Learning Machines
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          The Final Journey
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_4_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_4">
+<span class="md-nav__icon md-icon"></span>
+          The Final Journey
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Final%20Journey/Have%20I%20accomplished%20what%20I%20wanted%20to%20learn%20from%20this%20course%3F%20%282%29/">
+        Have I accomplished what I wanted to learn from this course? (2)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Final%20Journey/What%20is%20the%20most%20powerful%20thing%20you%27ve%20learned%20in%20this%20course%3F%20%281%29/">
+        What is the most powerful thing you've learned in this course? (1)
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          The Florishment of the Internet
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_5">
+<span class="md-nav__icon md-icon"></span>
+          The Florishment of the Internet
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Florishment%20of%20the%20Internet/The%20Florishment%20of%20the%20Internet/">
+        The Florishment of the Internet
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+          Class Notes
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_2">
+<span class="md-nav__icon md-icon"></span>
+          Class Notes
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Florishment%20of%20the%20Internet/Class%20Notes/Is%20It%20Time%20for%20the%20Internet%20yet%3F/">
+        Is It Time for the Internet yet?
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Florishment%20of%20the%20Internet/Class%20Notes/March%2029-%20I%20love%20the%2090%27s%20even%20more%21%21/">
+        March 29  I love the 90's even more!!
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          Readings
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_3">
+<span class="md-nav__icon md-icon"></span>
+          Readings
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Florishment%20of%20the%20Internet/Readings/%22A%20Protocol%20for%20Packet%20Network%20Intercommunication%22/">
+        "A Protocol for Packet Network Intercommunication"
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Florishment%20of%20the%20Internet/Readings/Anatomy%20of%20an%20AI%20System/">
+        Anatomy of an AI System
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Florishment%20of%20the%20Internet/Readings/Before%20the%20Web%20There%20Was%20Gopher/">
+        Before the Web There Was Gopher
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Florishment%20of%20the%20Internet/Readings/The%20Internet%20Topology%20Zoo/">
+        The Internet Topology Zoo
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Florishment%20of%20the%20Internet/Readings/The%20Internet%20myth-%20From%20the%20Internet%20Imaginary%20to%20Network%20Ideologies/">
+        The Internet myth  From the Internet Imaginary to Network Ideologies
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Florishment%20of%20the%20Internet/Readings/The%20News%20Industry%2C%20In%20Media%20Today-%20Mass%20Communication%20in%20a%20Converging%20World%20Group/">
+        The News Industry, In Media Today  Mass Communication in a Converging World Group
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_5_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_5_4" id="__nav_5_4_label" tabindex="0">
+          Thoughts &amp; Additional Information
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_5_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_5_4">
+<span class="md-nav__icon md-icon"></span>
+          Thoughts &amp; Additional Information
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Florishment%20of%20the%20Internet/Thoughts%20%26%20Additional%20Information/Flooding%20the%20Zone/">
+        Flooding the Zone
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Florishment%20of%20the%20Internet/Thoughts%20%26%20Additional%20Information/Geo-cities%20and%20Vine/">
+        Geo cities and Vine
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Florishment%20of%20the%20Internet/Thoughts%20%26%20Additional%20Information/Has%20the%20Internet%20led%20to%20an%20unsafe%20social%20enviorment%3F/">
+        Has the Internet led to an unsafe social enviorment?
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Florishment%20of%20the%20Internet/Thoughts%20%26%20Additional%20Information/How%20%20Tumblr%20Creates%20Perverse%20Incentives/">
+        How  Tumblr Creates Perverse Incentives
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Florishment%20of%20the%20Internet/Thoughts%20%26%20Additional%20Information/Peverse%20Incentives%20and%20Tumblr/">
+        Peverse Incentives and Tumblr
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Florishment%20of%20the%20Internet/Thoughts%20%26%20Additional%20Information/The%20Fall%20of%20%20The%20Newspaper%20and%20how%20it%20relates%20to%20AI/">
+        The Fall of  The Newspaper and how it relates to AI
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Florishment%20of%20the%20Internet/Thoughts%20%26%20Additional%20Information/The%20Social%20and%20Political%20Implications%20of%20AI%20Systems%20%28Crawford%20and%20Joler%27s%29/">
+        The Social and Political Implications of AI Systems (Crawford and Joler's)
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Florishment%20of%20the%20Internet/Thoughts%20%26%20Additional%20Information/What%20is%20TCP/">
+        What is TCP
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          The Pre History of the Internet
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_label" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_6">
+<span class="md-nav__icon md-icon"></span>
+          The Pre History of the Internet
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Pre-History%20of%20the%20Internet/The%20Pre-History%20of%20the%20Internet/">
+        The Pre History of the Internet
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+          Class Notes
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_2_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_2">
+<span class="md-nav__icon md-icon"></span>
+          Class Notes
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Pre-History%20of%20the%20Internet/Class%20Notes/Book%20Lab/">
+        Book Lab
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Pre-History%20of%20the%20Internet/Class%20Notes/Week%201/">
+        Week 1
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Pre-History%20of%20the%20Internet/Class%20Notes/Week%202/">
+        Week 2
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_3" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_3" id="__nav_6_3_label" tabindex="0">
+          Readings
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_3_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_3">
+<span class="md-nav__icon md-icon"></span>
+          Readings
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Pre-History%20of%20the%20Internet/Readings/As%20We%20May%20Think/">
+        As We May Think
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Pre-History%20of%20the%20Internet/Readings/From%20Clay%20Tablets%20to%20Web-%20Journey%20of%20Library%20Catalogue/">
+        From Clay Tablets to Web  Journey of Library Catalogue
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Pre-History%20of%20the%20Internet/Readings/Introduction-%20Media%20as%20Historical%20Subjects/">
+        Introduction  Media as Historical Subjects
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Pre-History%20of%20the%20Internet/Readings/The%20%22Amherst%20Method%22%20-%20Origins%20of%20the%20Dewey%20Decimal%20Classification%20Scheme/">
+        The "Amherst Method"   Origins of the Dewey Decimal Classification Scheme
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Pre-History%20of%20the%20Internet/Readings/The%20Garden%20and%20the%20Stream-%20A%20Technopastoral/">
+        The Garden and the Stream  A Technopastoral
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" id="__nav_6_4" type="checkbox"/>
+<label class="md-nav__link" for="__nav_6_4" id="__nav_6_4_label" tabindex="0">
+          Thoughts &amp; Additional Information
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-expanded="false" aria-labelledby="__nav_6_4_label" class="md-nav" data-md-level="2">
+<label class="md-nav__title" for="__nav_6_4">
+<span class="md-nav__icon md-icon"></span>
+          Thoughts &amp; Additional Information
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Pre-History%20of%20the%20Internet/Thoughts%20%26%20Additional%20Information/About%20Melvil%20Dewey/">
+        About Melvil Dewey
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Pre-History%20of%20the%20Internet/Thoughts%20%26%20Additional%20Information/As%20We%20May%20Think%20and%20How%20it%20relates%20to%20The%20Garden%20and%20Stream/">
+        As We May Think and How it relates to The Garden and Stream
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Pre-History%20of%20the%20Internet/Thoughts%20%26%20Additional%20Information/History%20of%20the%20Book/">
+        History of the Book
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Pre-History%20of%20the%20Internet/Thoughts%20%26%20Additional%20Information/How%20the%20Printing%20Press%20Changed%20the%20World/">
+        How the Printing Press Changed the World
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Pre-History%20of%20the%20Internet/Thoughts%20%26%20Additional%20Information/THE%20DEWEY%20DEBATE/">
+        THE DEWEY DEBATE
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../../The%20Pre-History%20of%20the%20Internet/Thoughts%20%26%20Additional%20Information/The%20Garden%20and%20Stream%20and%20how%20it%20relates%20to%20Oral%20and%20Visual%20Cultures/">
+        The Garden and Stream and how it relates to Oral and Visual Cultures
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<h1>Lovelace and Babbage</h1>
+<p>Related Links:
+- <a href="../About%20Ada%20Lovelace/">About Ada Lovelace</a>
+- <a href="../../Readings/Lovelace%20%26%20Babbage%20and%20the%20creation%20of%20the%201843%20%27notes%27/">Lovelace &amp; Babbage and the creation of the 1843 'notes'</a></p>
+<hr/>
+<p>Charles Babbage’s Difference Engine and Analytical Engine, conceived in the first half of the 19th century, are often seen as anticipating key design features used in modern computing, even though none of Babbage’s extraordinary devices was fully built in his lifetime. </p>
+<p>Augusta Ada Lovelace, née Byron, who worked against the restrictions on women of her day to successfully train as a mathematician, worked closely with Babbage to describe the more advanced of his Engines, the Analytical Engine, in a collection of “Notes” published in Taylor’s Scientific Memoirs in 1843.
+    - Lovelace’s vision of the Engines’ potential for the future of computation may now be seen as having exceeded Babbage’s own vision for his machines in several key ways. She became the first person known to have crossed the intellectual threshold between conceptualizing computing as only for calculation on the one hand, and on the other hand, computing as we know it today: with wider applications made possible by symbolic substitution</p>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+<script src="../../../assets/javascripts/bundle.51198bba.min.js"></script>
+<script src="../../../javascripts/mathjax.js"></script>
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</body>
+</html>
