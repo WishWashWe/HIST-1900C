@@ -3,10 +3,17 @@ Absolutely! I believe that I have achieved my desired learning objectives throug
 
 ---
 ## The Journey Between #inventors and website/The Beginnings of the Internet/Thoughts & Additional Information/Alexander Graham Bell and the Telephone
+
 - #inventors
+
 - [[website/The Beginnings of the Internet/Thoughts & Additional Information/Alexander Graham Bell and the Telephone]]
+
 - [[About Alan Turing]]
+
 - [[About Ada Lovelace]]
+
 - [[Lovelace and Babbage]]
+
 - [[Turing's Learning Machines]]
+
 - [[About Melvil Dewey]]
